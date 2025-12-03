@@ -1,4 +1,4 @@
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from 'sanity'
 
 export const eventType = defineType({
   name: 'event',
@@ -16,7 +16,7 @@ export const eventType = defineType({
     defineField({
       name: 'eventType',
       type: 'string',
-    }),    
+    }),
     defineField({
       name: 'date',
       type: 'datetime',
@@ -28,21 +28,22 @@ export const eventType = defineType({
     defineField({
       name: 'venue',
       type: 'reference',
-      to: [{type: 'venue'}],
+      to: [{ type: 'venue' }],
     }),
     defineField({
       name: 'headline',
       type: 'reference',
-      to: [{type: 'artist'}],
+      to: [{ type: 'artist' }],
     }),
     defineField({
       name: 'image',
       type: 'image',
+      options: { hotspot: true },
     }),
     defineField({
       name: 'details',
       type: 'array',
-      of: [{type: 'block'}],
+      of: [{ type: 'block' }],
     }),
     defineField({
       name: 'tickets',
