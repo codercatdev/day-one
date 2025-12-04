@@ -49,5 +49,11 @@ export const eventType = defineType({
       name: 'tickets',
       type: 'url',
     }),
+    defineField({
+      name: 'firstPublished',
+      description: 'Automatically set when first published',
+      type: 'datetime',
+      readOnly: true,
+    })
   ],
 })
