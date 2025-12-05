@@ -19,20 +19,23 @@
   ],
   "dependencies": {
     "@sanity/client": "^7.13.1",
+    "@sanity/icons": "^3.7.4",
+    "@sanity/ui": "^2.16.22",
     "@sanity/vision": "^4.20.0",
     "react": "^19.1",
     "react-dom": "^19.1",
     "sanity": "^4.20.0",
+    "sanity-plugin-documents-pane": "^3.0.1",
     "styled-components": "^6.1.18"
   },
   "devDependencies": {
     "@sanity/blueprints": "0.7.0",
     "@sanity/eslint-config-studio": "^5.0.2",
+    "@sanity/functions": "1.1.0",
     "@types/react": "^19.1",
     "eslint": "^9.28",
     "prettier": "^3.5",
-    "typescript": "^5.8",
-    "@sanity/functions": "1.1.0"
+    "typescript": "^5.8"
   },
   "prettier": {
     "semi": false,
