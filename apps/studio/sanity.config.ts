@@ -4,6 +4,7 @@ import { visionTool } from '@sanity/vision'
 import { schemaTypes } from './schemaTypes'
 import { structure } from './structure'
 import { defaultDocumentNode } from './structure/defaultDocumentNode'
+import { dataCleanupTool } from './dataCleanupTool'
 
 export default defineConfig({
   name: 'default',
@@ -21,7 +22,7 @@ export default defineConfig({
     const isAdmin = currentUser?.roles.some((role) => role.name === 'administrator')
 
     if (isAdmin) {
-      return prev
+      return [...prev, dataCleanupTool()]
     }
 
     return prev.filter((tool) => tool.name !== 'vision')
