@@ -37,8 +37,23 @@ export const eventType = defineType({
         .error(`Required to generate a page on the website`),
     }),
     defineField({
+      hidden: true,
       name: 'eventType',
       type: 'string',
+      deprecated: {
+        reason: 'Use the "Event format" field instead.'
+      },
+      readOnly: true,
+      options: {
+        list: ['in-person', 'virtual'],
+        layout: 'radio',
+      },
+    }),
+    defineField({
+      name: 'format',
+      title: 'Event Format',
+      type: 'string',
+      validation: (rule) => rule.required(),
       options: {
         list: ['in-person', 'virtual'],
         layout: 'radio',
